@@ -25,7 +25,9 @@ const publishDir = path.join(__dirname, '../publish');
 gulp.task('prepublish', () => {
     let project = depMap[argv.name];
     let publicPath = path.join(publishDir, argv.name);
-    return del([publicPath]).then(() => {
+    return del([publicPath], {
+        force: true
+    }).then(() => {
         return ncp(project.path, publicPath);
     }).then(() => {
         return install(publicPath).then(() => {
