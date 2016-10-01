@@ -3,3 +3,5 @@
 !/dev/
 node_modules
 !.gitignore
+/common/*
+!/common/.gitkeep

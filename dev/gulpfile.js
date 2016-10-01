@@ -18,6 +18,8 @@ let promisify = require('promisify-node');
 
 let ncp = promisify(require('ncp'));
 
+let depMap = require('./depMap');
+
 const publishDir = path.join(__dirname, './publish');
 
 gulp.task('prepublish', () => {
