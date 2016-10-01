@@ -1,0 +1,23 @@
+{
+  "name": "project-container-dev",
+  "version": "0.0.1",
+  "description": "project container",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project",
+    "container"
+  ],
+  "author": "ddchen",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "ncp": "^2.0.0",
+    "nodedevdeps": "0.0.3",
+    "promisify-node": "^0.4.0",
+    "spawnp": "0.0.1"
+  }
+}
