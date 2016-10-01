@@ -9,5 +9,5 @@ node_modules
 !/publish/.gitkeep
 /opensource/*
 !/opensource/.gitkeep
-
-
+/app/*
+!/app/.gitkeep
