@@ -5,7 +5,7 @@ let gulp = require('gulp');
 let argv = require('yargs').argv;
 
 let {
-    install
+    install, link, cleanLink
 } = require('nodedevdeps');
 
 let path = require('path');
@@ -18,7 +18,7 @@ let promisify = require('promisify-node');
 
 let ncp = promisify(require('ncp'));
 
-let depMap = require('./depMap');
+let depMap = require('./dep');
 
 const publishDir = path.join(__dirname, '../publish');
 
@@ -44,4 +44,12 @@ gulp.task('publish', ['prepublish'], () => {
         cwd: path.join(publishDir, argv.name),
         stdio: 'inherit'
     });
+});
+
+gulp.task('link', () => {
+    return link(depMap);
+});
+
+gulp.task('cleanLinks', () => {
+    return cleanLink(depMap);
 });

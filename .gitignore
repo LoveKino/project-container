@@ -11,3 +11,7 @@ node_modules
 !/opensource/.gitkeep
 /app/*
 !/app/.gitkeep
+/example/*
+!/example/.gitkeep
+/history/*
+!/history/.gitkeep
